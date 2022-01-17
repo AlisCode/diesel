@@ -1,6 +1,7 @@
 //! Types related to database connections
 
 pub mod commit_error_processor;
+pub mod read_only;
 mod statement_cache;
 mod transaction_manager;
 
@@ -11,6 +12,7 @@ use crate::expression::QueryMetadata;
 use crate::query_builder::{AsQuery, QueryFragment, QueryId};
 use crate::result::*;
 
+pub use self::read_only::{ReadOnly, ReadOnlyExt};
 #[doc(hidden)]
 pub use self::statement_cache::{MaybeCached, PrepareForCache, StatementCache, StatementCacheKey};
 pub use self::transaction_manager::{

@@ -40,6 +40,7 @@ mod offset_dsl;
 pub(crate) mod order_dsl;
 #[doc(hidden)]
 pub mod positional_order_dsl;
+mod read_only;
 mod save_changes_dsl;
 #[doc(hidden)]
 pub mod select_dsl;
@@ -52,6 +53,7 @@ pub use self::join_dsl::{InternalJoinDsl, JoinOnDsl, JoinWithImplicitOnClause};
 pub use self::load_dsl::CompatibleType;
 #[doc(hidden)]
 pub use self::load_dsl::LoadQuery;
+pub use self::read_only::RunReadOnlyQueryDsl;
 pub use self::save_changes_dsl::{SaveChangesDsl, UpdateAndFetchResults};
 
 /// The traits used by `QueryDsl`.

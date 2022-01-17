@@ -396,7 +396,7 @@ pub mod prelude {
     #[doc(inline)]
     pub use crate::associations::{Associations, GroupedBy, Identifiable};
     #[doc(inline)]
-    pub use crate::connection::Connection;
+    pub use crate::connection::{Connection, ReadOnly, ReadOnlyExt};
     #[doc(inline)]
     pub use crate::deserialize::{Queryable, QueryableByName};
     #[doc(inline)]
@@ -419,7 +419,8 @@ pub mod prelude {
     pub use crate::query_builder::DecoratableTarget;
     #[doc(inline)]
     pub use crate::query_dsl::{
-        BelongingToDsl, CombineDsl, JoinOnDsl, QueryDsl, RunQueryDsl, SaveChangesDsl,
+        BelongingToDsl, CombineDsl, JoinOnDsl, QueryDsl, RunQueryDsl, RunReadOnlyQueryDsl,
+        SaveChangesDsl,
     };
     #[doc(inline)]
     pub use crate::query_source::{Column, JoinTo, QuerySource, Table};
